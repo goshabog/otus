@@ -40,7 +40,7 @@ jobs:
       run: ctest -C ${{env.BUILD_TYPE}}
 
     - name: Packages
-      run: cmake --build . --target package
+      run: cmake --build ${{github.workspace}}/build  --target package
 
     - name: Create Release
       id: create_release
